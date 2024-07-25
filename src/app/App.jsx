@@ -1,5 +1,7 @@
 import '../App.css';
 
+import Inventory from "../features/inventory/Inventory.jsx";
+
 function App({ state, dispatch }) {
 
 	return (
@@ -9,6 +11,12 @@ function App({ state, dispatch }) {
 			{/* TODO: Add SearchBar */}
 
 			{/* TODO: Add Inventory */}
+			<Inventory
+				inventory={state.inventory}
+				currencyFilter={state.currencyFilter}
+				searchTerm={state.searchTerm}
+				dispatch={dispatch}
+			/>
 
 			{/* TODO: Add Cart */}
 		</div>

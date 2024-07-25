@@ -44,7 +44,9 @@ const Inventory = ({
                {displayPrice.toFixed(2)}
                {currencyFilter}
             </h3>
-            <button onClick={() => onClickHandler(inventoryItem)}
+            <button
+               className="add-to-cart-button"
+               onClick={() => onClickHandler(inventoryItem)}
             >
                Add to Cart
             </button>
