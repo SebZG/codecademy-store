@@ -1,6 +1,7 @@
 import '../App.css';
 
 import CurrencyFilter from "../features/currencyFilter/CurrencyFilter.jsx"
+import SearchBar from '../features/searchBar/SearchBar.jsx';
 import Inventory from "../features/inventory/Inventory.jsx";
 
 function App({ state, dispatch }) {
@@ -12,7 +13,10 @@ function App({ state, dispatch }) {
 				dispatch={dispatch}
 			/>
 
-			{/* TODO: Add SearchBar */}
+			<SearchBar
+				searchTerm={state.searchTerm}
+				dispatch={dispatch}
+			/>
 
 			<Inventory
 				inventory={state.inventory}
