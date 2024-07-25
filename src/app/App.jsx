@@ -3,6 +3,7 @@ import '../App.css';
 import CurrencyFilter from "../features/currencyFilter/CurrencyFilter.jsx"
 import SearchBar from '../features/searchBar/SearchBar.jsx';
 import Inventory from "../features/inventory/Inventory.jsx";
+import Cart from '../features/cart/Cart.jsx';
 
 function App({ state, dispatch }) {
 
@@ -25,7 +26,11 @@ function App({ state, dispatch }) {
 				dispatch={dispatch}
 			/>
 
-			{/* TODO: Add Cart */}
+			<Cart
+				cart={state.cart}
+				currencyFilter={state.currencyFilter}
+				dispatch={dispatch}
+			/>
 		</div>
 	);
 }
