@@ -1,16 +1,19 @@
 import '../App.css';
 
+import CurrencyFilter from "../features/currencyFilter/CurrencyFilter.jsx"
 import Inventory from "../features/inventory/Inventory.jsx";
 
 function App({ state, dispatch }) {
 
 	return (
 		<div>
-			{/* TODO: Add CurrencyFilter */}
+			<CurrencyFilter
+				currencyFilter={state.currencyFilter}
+				dispatch={dispatch}
+			/>
 
 			{/* TODO: Add SearchBar */}
 
-			{/* TODO: Add Inventory */}
 			<Inventory
 				inventory={state.inventory}
 				currencyFilter={state.currencyFilter}
